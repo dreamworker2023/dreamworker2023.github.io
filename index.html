@@ -1,82 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-	<title>Informazioni sulla RAM</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-			background-color: #f2f2f2;
-			color: #555;
-			line-height: 1.5;
-		}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamworker2023 | Portfolio & Accademy</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f8fafc;
+            --accent: #38bdf8;
+            --python: #ffde57;
+            --secondary: #94a3b8;
+        }
 
-		.container {
-			max-width: 800px;
-			margin: 0 auto;
-			padding: 30px;
-			background-color: #fff;
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-		}
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.6; }
 
-		h1 {
-			font-size: 48px;
-			text-align: center;
-			margin-top: 0;
-			margin-bottom: 20px;
-			color: #039be5;
-		}
+        header {
+            height: 45vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+            padding: 20px;
+        }
 
-		p {
-			font-size: 20px;
-			margin-bottom: 20px;
-			text-align: justify;
-			position: relative;
-			padding-left: 30px;
-			padding-right: 30px;
-            border-radius: 10px;
-            background-color: aliceblue;
-		}
-		ul {
-			list-style-type: none;
-			margin-bottom: 30px;
-			padding-left: 40px;
-		}
-		li {
-			font-size: 20px;
-			margin-bottom: 10px;
-			position: relative;
-			padding-left: 30px;
-		}
-		li:before {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 0;
-			margin-top: -5px;
-			height: 10px;
-			width: 10px;
-			border-radius: 50%;
-			background-color: #039be5;
-		}
-	</style>
+        h1 { font-size: 3.5rem; color: var(--accent); letter-spacing: -1px; }
+        .subtitle { color: var(--secondary); font-size: 1.2rem; margin-top: 10px; }
+
+        .container { max-width: 1100px; margin: -50px auto 50px; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+
+        .card {
+            background: var(--card);
+            padding: 35px;
+            border-radius: 16px;
+            border: 1px solid #334155;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .card.python-card { border: 1px solid var(--python); }
+
+        .card h3 { font-size: 1.6rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .card p { color: var(--secondary); margin-bottom: 20px; flex-grow: 1; }
+
+        .badge-container { margin-bottom: 20px; }
+        .badge {
+            background: #334155;
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .btn {
+            display: block;
+            padding: 12px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+
+        .btn-web { background: var(--accent); color: var(--bg); }
+        .btn-python { background: var(--python); color: #3776ab; }
+        .btn:hover { opacity: 0.9; }
+
+        footer { text-align: center; padding: 40px; color: var(--secondary); border-top: 1px solid #1e293b; }
+    </style>
 </head>
 <body>
-	<div class="container">
-		<h1>Informazioni sulla RAM</h1>
-		<p>La RAM (Random Access Memory) è un tipo di memoria volatile utilizzata nei computer per archiviare temporaneamente i dati e le istruzioni che il processore utilizza per eseguire i programmi. Essa permette al computer di accedere rapidamente ai dati necessari per l'esecuzione dei programmi e di eseguire molte operazioni contemporaneamente.</p>
-		<p>La RAM è costituita da una serie di chip e si installa sulla scheda madre del computer utilizzando appositi zoccoli e per questo può essere facilmente espansa o aggiornata. Esistono diversi tipi di RAM, tra cui:</p>
-		<ul>
-			<li>SDRAM (Synchronous Dynamic RAM)</li>
-			<li>DDR (Double Data Rate) SDRAM</li>
-			<li>DDR2 SDRAM</li>
-			<li>DDR3 SDRAM</li>
-			<li>DDR4 SDRAM</li>
-			<li>DDR5 SDRAM</li>
-		</ul>
-		<p>Le differenze tra le varie tipologie di DDR RAM sono principalmente legate alla velocità di trasmissione dei dati, alla capacità massima supportata, all'efficienza energetica e alla compatibilità con le schede madri del computer. Ogni versione di DDR RAM richiede una scheda madre compatibile e non è possibile utilizzare, ad esempio, una DDR4 SDRAM su una scheda madre che supporta solo la DDR3 SDRAM.</p>
-		<p>Inoltre, le prestazioni del computer possono essere significativamente influenzate dalla quantità e dalla qualità della RAM utilizzata, quindi è importante scegliere la RAM giusta in base alle specifiche del proprio computer e alle esigenze di utilizzo.</p>
-	</div>
+
+    <header>
+        <h1>Dreamworker2023</h1>
+        <p class="subtitle">Web Development & PyGame Mentor</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <div>
+                    <h3>🌐 Web Basics</h3>
+                    <div class="badge-container">
+                        <span class="badge">HTML5</span>
+                        <span class="badge">CSS3</span>
+                        <span class="badge">Deploy</span>
+                    </div>
+                    <p>Impara a strutturare siti web e a pubblicarli gratuitamente su GitHub Pages. Il punto di partenza per ogni aspirante developer.</p>
+                </div>
+                <a href="https://github.com/dreamworker2023/dreamworker2023.github.io" class="btn btn-web">Sorgente Sito</a>
+            </div>
+
+            <div class="card python-card">
+                <div>
+                    <h3>🐍 PyGame Accademy</h3>
+                    <div class="badge-container">
+                        <span class="badge" style="background: #3776ab; color: white;">Python</span>
+                        <span class="badge" style="background: #ffd43b; color: #3776ab;">Game Dev</span>
+                    </div>
+                    <p>Entra nel mondo dello sviluppo videogame 2D. Scopri la logica dietro ai grandi classici usando la potenza di Python e Pygame.</p>
+                </div>
+                <a href="https://github.com/dreamworker2023/PyGame-Accademy" class="btn btn-python">Esplora il Corso</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Dreamworker2023 | Risorse didattiche Open Source</p>
+    </footer>
+
 </body>
 </html>
